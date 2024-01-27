@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'connectBackend'`, () => {
+  it(`should have as title 'build-Task-Manager'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('connectBackend');
+    expect(app.title).toEqual('build-Task-Manager');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, connectBackend');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, build-Task-Manager');
   });
 });
