@@ -23,16 +23,33 @@ export class LoginComponent {
       constructor(){}
 
       ngOnInit(): void {
-        //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-        //Add 'implements OnInit' to the class.
+       const localData = localStorage.getItem('signUpUsers');
+       if (localData!=null) {
+        this.signupUsers = JSON.parse(localData)
+       }
         
       }
 
       onSingUp(){
-
+        this.signupUsers.push(this.singupObj);
+        localStorage.setItem('signUpUsers',JSON.stringify(this.signupUsers));
+        this.singupObj ={
+          userName :'',
+          email:'',
+          password:'',
+          number:'',
+          gender:''
+          };
       }
 
       onLogin(){
-        
+        debugger
+        const isUserExist = this.signupUsers.find(m=>m.userName==this.loginObj.userName && m.password==this.loginObj.password);
+        if (isUserExist!=undefined) {
+          alert("User Login Successfully.")
+        }
+        else{
+          alert('Wrong creadentials.')
+        }
       }
 }
