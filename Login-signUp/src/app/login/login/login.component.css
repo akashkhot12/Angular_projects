@@ -45,7 +45,7 @@ button{
 	justify-content: center;
 	display: block;
 	color: #fff;
-	background: #FF407D;
+	background: #000;
 	font-size: 1em;
 	font-weight: bold;
 	margin-top: 20px;
@@ -56,7 +56,7 @@ button{
 	cursor: pointer;
 }
 button:hover{
-	background: #f95e8f;
+	background: #2e2e2e;
 }
 .login{
 	height: 480px;
